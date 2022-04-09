@@ -36,13 +36,13 @@ public class TicketMachine {
         return saldo;
     }
 
-    public TrocoIterator getTroco() {
+    public Iterator<PapelMoeda> getTroco() {
         Troco t = new Troco(this.saldo);
-        TrocoIterator it = t.getIterator();
+        Iterator<PapelMoeda> it = t.getIterator();
         return it;
     }
 
-    public String imprimir() throws SaldoInsuficienteException {
+    public void imprimir() throws SaldoInsuficienteException {
         if (saldo < valor) {
             throw new SaldoInsuficienteException();
         }

@@ -6,7 +6,7 @@ import java.util.Iterator;
  *
  * @author Calebe de Paula Bianchini
  */
-class Troco {
+public class Troco {
 
     protected PapelMoeda[] papeisMoeda;
 
@@ -46,14 +46,14 @@ class Troco {
 
         @Override
         public PapelMoeda next() {
-            PapelMoeda ret = null;
-            for (int i = troco.papeisMoeda.length-1; i >= 0 && ret != null; i--) {
+            for (int i = troco.papeisMoeda.length-1; i >= 0; i--) {
                 if (troco.papeisMoeda[i] != null) {
-                    ret = troco.papeisMoeda[i];
+                    PapelMoeda ret = troco.papeisMoeda[i];
                     troco.papeisMoeda[i] = null;
+                    return ret;
                 }
             }
-            return ret;
+            return null;
         }
 
         @Override
