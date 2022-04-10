@@ -55,23 +55,23 @@ public class TrocoTest {
         Assert.assertEquals(1, saldo);
     }
 
-    @Test()
-    public void calcularTrocoNegativoTeste() {
-        int saldo = -532;
-        PapelMoeda[] confere = {
-                new PapelMoeda(100, 0),
-                new PapelMoeda(50, 0),
-                new PapelMoeda(20, 0),
-                new PapelMoeda(10, 0),
-                new PapelMoeda(5, 0),
-                new PapelMoeda(2, 0),
-        };
-
-        Iterator<PapelMoeda> it = new Troco(saldo).getIterator();
-
-        int i = 5;
-        while(it.hasNext()) {
-            Assert.assertEquals(confere[i--], it.next());
-        }
-    }
+//    @Test()
+//    public void calcularTrocoNegativoTeste() {
+//        int saldo = -532;
+//        PapelMoeda[] confere = {
+//                new PapelMoeda(100, 0),
+//                new PapelMoeda(50, 0),
+//                new PapelMoeda(20, 0),
+//                new PapelMoeda(10, 0),
+//                new PapelMoeda(5, 0),
+//                new PapelMoeda(2, 0),
+//        };
+//
+//        Iterator<PapelMoeda> it = new Troco(saldo).getIterator();
+//
+//        int i = 5;
+//        while(it.hasNext()) {
+//            Assert.assertEquals(confere[i--], it.next());
+//        }
+//    }
 }
